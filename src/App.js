@@ -1,6 +1,7 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Auth from './components/Auth/Auth.js';
+import { useUser } from './context/UserContext.js';
 
 function App() {
   const { user } = useUser();
@@ -10,7 +11,7 @@ function App() {
         <Route path="/auth/:type" component={Auth} />
         <Route exact path="/">
           <>
-            {user && <Redirect to="/items" />}
+            {user && <Redirect to="/list" />}
             {!user && <Redirect to="/auth/sign-in" />}
           </>
         </Route>

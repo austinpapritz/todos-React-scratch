@@ -12,7 +12,7 @@ export default function Auth() {
   const { type } = useParams();
   const { user, setUser } = useUser();
   if (user) {
-    return <Redirect to="/items" />;
+    return <Redirect to="/list" />;
   }
   const submitAuth = async () => {
     // TODO
