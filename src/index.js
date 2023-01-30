@@ -5,13 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { UserProvider } from './context/UserContext.js';
+import { TodoProvider } from './context/TodoContext.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <TodoProvider>
+          <App />
+        </TodoProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
