@@ -6,11 +6,11 @@ export default function TodoList() {
 
   return (
     <>
-      {todos.map((item) => (
-        <div key={item.id}>
+      {todos.map((todo) => (
+        <div key={todo.id}>
           <label className="checkbox">
-            <input className="m-1" type="checkbox" checked={item.complete} />
-            {item.description}
+            <input type="checkbox" checked={todo.complete} />
+            {todo.description}
           </label>
         </div>
       ))}

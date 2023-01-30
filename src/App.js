@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route path="/auth/:type" component={Auth} />
-        <Route path="/items" component={Todo} />
+        <Route path="/list" component={Todo} />
         <Route exact path="/">
           <>
             {user && <Redirect to="/list" />}

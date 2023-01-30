@@ -5,10 +5,12 @@ const TodoContext = createContext();
 
 const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState([]);
+
   useEffect(() => {
     const fetchItems = async () => {
       try {
         const data = await getListOfTodos();
+        console.log('data', data);
         setTodos(data);
       } catch (e) {
         console.error(e.message);
