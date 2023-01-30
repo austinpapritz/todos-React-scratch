@@ -1,5 +1,6 @@
 import { NavLink, Redirect, useParams } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import './Auth.css';
 import { useState } from 'react';
 import { authUser } from '../../services/auth';
@@ -32,7 +33,7 @@ export default function Auth() {
   return (
     <div className="auth box">
       <nav className="panel is-success">
-        <div className="panel-heading">Welcome to Alchemy Shopping List</div>
+        <div className="panel-heading">Welcome to Alchemy Todo List</div>
         <div className="panel-tabs">
           <NavLink
             className="is-size-6 has-text-weight-bold"
