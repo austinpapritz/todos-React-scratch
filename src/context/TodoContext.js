@@ -10,14 +10,13 @@ const TodoProvider = ({ children }) => {
     const fetchItems = async () => {
       try {
         const data = await getListOfTodos();
-        console.log('data', data);
         setTodos(data);
       } catch (e) {
         console.error(e.message);
       }
     };
     fetchItems();
-  }, []);
+  }, [todos]);
   return <TodoContext.Provider value={{ todos, setTodos }}>{children}</TodoContext.Provider>;
 };
 

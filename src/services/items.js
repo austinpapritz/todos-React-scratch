@@ -11,3 +11,13 @@ export async function createTodo(description) {
 
   return checkError(response);
 }
+
+export async function completeTodo({ id, complete }) {
+  const response = await client
+    .from('todos')
+    .update({ complete: !complete })
+    .match({ id })
+    .single();
+
+  return checkError(response);
+}
