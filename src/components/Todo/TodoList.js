@@ -6,6 +6,7 @@ export default function TodoList() {
 
   return (
     <>
+      <h2>My Todo List</h2>
       {todos.map((todo) => (
         <div key={todo.id}>
           <label className="checkbox">

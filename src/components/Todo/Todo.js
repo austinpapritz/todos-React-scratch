@@ -1,4 +1,5 @@
-import TodoList from './TodoList';
+import TodoList from './TodoList.js';
+import TodoForm from './TodoForm.js';
 
 import { useUser } from '../../context/UserContext';
 import { Redirect } from 'react-router-dom';
@@ -15,6 +16,7 @@ export default function Todo() {
       <div className="todo-container">
         <TodoList />
       </div>
+      <TodoForm />
     </div>
   );
 }
