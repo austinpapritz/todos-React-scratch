@@ -1,7 +1,7 @@
 import { checkError, client } from './client';
 
 export async function getListOfTodos() {
-  const response = await client.from('todos').select();
+  const response = await client.from('todos').select().order('id', { ascending: false });
 
   return checkError(response);
 }

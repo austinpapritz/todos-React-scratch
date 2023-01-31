@@ -11,21 +11,17 @@ export default function Auth() {
   const [password, setPassword] = useState('');
   const { type } = useParams();
   const { user, setUser } = useUser();
+
   if (user) {
     return <Redirect to="/list" />;
   }
+
   const submitAuth = async () => {
-    // TODO
-    // call authUser with email, password, type
     try {
-      // if successful
       const newUser = await authUser(email, password, type);
-      // setUser in context
+
       setUser(newUser);
-      // redirect to items -- happens through a re-render
-      // which triggers line 15 Redirect
     } catch (e) {
-      // else display error
       console.error(e);
     }
   };
@@ -45,7 +41,7 @@ export default function Auth() {
         <div className="panel-block">
           <div className="field">
             <label className="label">Email</label>
-            <div className="control has-icons-left has-icons-right">
+            <div className="control">
               <input
                 className="input"
                 type="email"
@@ -60,7 +56,7 @@ export default function Auth() {
           </div>
           <div className="field">
             <label className="label">Password</label>
-            <div className="control has-icons-left has-icons-right">
+            <div className="control">
               <input
                 className="input"
                 type="password"
