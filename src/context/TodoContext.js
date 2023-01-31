@@ -16,7 +16,7 @@ const TodoProvider = ({ children }) => {
       }
     };
     fetchItems();
-  }, [todos]);
+  }, []);
   return <TodoContext.Provider value={{ todos, setTodos }}>{children}</TodoContext.Provider>;
 };
 
