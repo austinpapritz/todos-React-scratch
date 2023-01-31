@@ -13,3 +13,11 @@
 .field {
   width: 100%;
 }
+
+.nav-link {
+  margin: 10px;
+}
+
+.icon {
+  margin: 5px;
+}

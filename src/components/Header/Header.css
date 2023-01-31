@@ -1,0 +1,13 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  background: cadetblue;
+}
+
+.button {
+  margin: 10px;
+}
+
+.nav-title {
+  line-height: 0;
+}

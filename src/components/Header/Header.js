@@ -1,3 +1,4 @@
+import './Header.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '../../context/UserContext.js';
@@ -17,14 +18,13 @@ export default function Header() {
   };
 
   return (
-    <nav role="navigation">
-      <div className="nav-container">
-        <h1>✔️ Todo List ✔️ </h1>
-        <a
-          className={`navbar-burger ${isActive ? 'is-active' : ''}`}
-          onClick={() => setIsActive((prev) => !prev)}
-        ></a>
-      </div>
+    <nav className="nav-container">
+      <h1 className="nav-title">✔️ Todo List ✔️ </h1>
+      <a
+        className={`navbar-burger ${isActive ? 'is-active' : ''}`}
+        onClick={() => setIsActive((prev) => !prev)}
+      ></a>
+
       <div className={`navbar-menu ${isActive ? 'is-active' : ''}`} id="navbar-list">
         <div className="navbar-end">
           <div className="navbar-item">
