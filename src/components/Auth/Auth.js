@@ -28,7 +28,7 @@ export default function Auth() {
 
   return (
     <div className="auth box">
-      <nav className="panel is-success">
+      <nav className="panel">
         <div className="panel-heading">Welcome to Alchemy Todo List</div>
         <div className="panel-tabs">
           <NavLink className="nav-link" to="/auth/sign-in" activeClassName="is-active">
@@ -71,7 +71,7 @@ export default function Auth() {
           </div>
         </div>
         <div className="control">
-          <button onClick={submitAuth} className="button is-success mt-2 mb-2">
+          <button onClick={submitAuth} className="button">
             Submit
           </button>
         </div>

@@ -1,6 +1,7 @@
 .nav-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: cadetblue;
 }
 
@@ -10,4 +11,8 @@
 
 .nav-title {
   line-height: 0;
+}
+
+.right-nav {
+  margin-right: 10px;
 }

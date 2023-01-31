@@ -39,12 +39,12 @@ export default function Header() {
               </div>
             )}
             {user && (
-              <>
+              <div className="right-nav">
                 <div>Welcome, {user.email}!</div>
                 <button className="button" onClick={handleLogout}>
                   Sign Out
                 </button>
-              </>
+              </div>
             )}
           </div>
         </div>
