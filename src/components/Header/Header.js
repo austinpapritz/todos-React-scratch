@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useUser } from '../../context/UserContext.js';
 import { signOut } from '../../services/auth.js';
 import { TodoContext } from '../../context/TodoContext.js';
+import { Button } from '@mui/material';
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
@@ -44,9 +45,9 @@ export default function Header() {
             {user && (
               <div className="right-nav">
                 <div>Welcome, {user.email}!</div>
-                <button className="button" onClick={handleLogout}>
+                <Button variant="contained" className="button" onClick={handleLogout}>
                   Sign Out
-                </button>
+                </Button>
               </div>
             )}
           </div>

@@ -22,8 +22,13 @@ export default function TodoList() {
       {todos.map((todo) => (
         <div key={todo.id}>
           <label className="checkbox">
-            <input type="checkbox" checked={todo.complete} onChange={() => handleCompleted(todo)} />
-            <p onClick={() => deleteItem(todo.id)}>{todo.description}</p>
+            <input
+              className="check-input"
+              type="checkbox"
+              checked={todo.complete}
+              onChange={() => handleCompleted(todo)}
+            />
+            {todo.description}
           </label>
         </div>
       ))}

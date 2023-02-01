@@ -1,3 +1,5 @@
+import '../../App.css';
+import { Button } from '@mui/material';
 import { useContext, useState } from 'react';
 import { TodoContext } from '../../context/TodoContext';
 import { createTodo } from '../../services/items.js';
@@ -24,9 +26,9 @@ export default function TodoForm() {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button className="submit-btn" onClick={handleNewTodo}>
+      <Button variant="contained" className="submit-btn" onClick={handleNewTodo}>
         Add
-      </button>
+      </Button>
     </div>
   );
 }
