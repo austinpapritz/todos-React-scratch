@@ -1,6 +1,7 @@
+import '../../App.css';
 import { useContext } from 'react';
 import { TodoContext } from '../../context/TodoContext';
-import { completeTodo, getListOfTodos } from '../../services/items.js';
+import { completeTodo, deleteItem, getListOfTodos } from '../../services/items.js';
 
 export default function TodoList() {
   const { todos, setTodos } = useContext(TodoContext);
@@ -22,7 +23,7 @@ export default function TodoList() {
         <div key={todo.id}>
           <label className="checkbox">
             <input type="checkbox" checked={todo.complete} onChange={() => handleCompleted(todo)} />
-            {todo.description}
+            <p onClick={() => deleteItem(todo.id)}>{todo.description}</p>
           </label>
         </div>
       ))}

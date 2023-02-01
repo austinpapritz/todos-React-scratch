@@ -1,17 +1,20 @@
 import './Header.css';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '../../context/UserContext.js';
 import { signOut } from '../../services/auth.js';
+import { TodoContext } from '../../context/TodoContext.js';
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
   const { user, setUser } = useUser();
+  const { setTodos } = useContext(TodoContext);
 
   const handleLogout = async () => {
     try {
       await signOut();
       setUser(null);
+      setTodos([]);
     } catch (e) {
       console.error(e.message);
     }

@@ -19,7 +19,6 @@ export default function Auth() {
   const submitAuth = async () => {
     try {
       const newUser = await authUser(email, password, type);
-
       setUser(newUser);
     } catch (e) {
       console.error(e);
@@ -31,10 +30,10 @@ export default function Auth() {
       <nav className="panel">
         <div className="panel-heading">Welcome to Alchemy Todo List</div>
         <div className="panel-tabs">
-          <NavLink className="nav-link" to="/auth/sign-in" activeClassName="is-active">
+          <NavLink className="nav-link" to="/auth/sign-in">
             Sign In
           </NavLink>
-          <NavLink className="nav-link" to="/auth/sign-up" activeClassName="is-active">
+          <NavLink className="nav-link" to="/auth/sign-up">
             Sign Up
           </NavLink>
         </div>

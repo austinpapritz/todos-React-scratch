@@ -21,3 +21,9 @@ export async function completeTodo({ id, complete }) {
 
   return checkError(response);
 }
+
+export async function deleteItem(id) {
+  const response = await client.from('todos').delete().eq('id', 1);
+
+  return checkError(response);
+}
