@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background: rosybrown;
+  height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +37,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.checkbox {
+  padding-left: 44%;
+  display: flex;
+  justify-content: start;
+  margin: 5px;
+  font-size: 2rem;
+}
+
+.check-input {
+  width: 30px;
+}
+
+.form-container {
+  margin: 5px;
+}
+
+.todo-input {
+  border-radius: 5px;
+  height: 25px;
 }

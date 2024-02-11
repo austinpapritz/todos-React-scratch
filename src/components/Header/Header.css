@@ -1,0 +1,19 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: cadetblue;
+  height: 8%;
+}
+
+.button {
+  margin: 10px;
+}
+
+.nav-title {
+  line-height: 0;
+}
+
+.right-nav {
+  margin-right: 10px;
+}
